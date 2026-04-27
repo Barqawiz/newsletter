@@ -226,24 +226,36 @@
     .in-developer-link {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      margin-top: 8px;
-      color: var(--in-muted);
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 12px;
+      padding: 16px 18px;
+      border: 1px solid var(--in-border);
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(59, 130, 246, 0.06));
+      color: var(--in-ink);
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-decoration: none;
       text-transform: uppercase;
-      transition: color 0.2s ease;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
     }
 
     .in-developer-link:hover,
     .in-developer-link:focus-visible {
-      color: var(--in-ink);
+      border-color: var(--in-purple);
+      box-shadow: 0 14px 35px rgba(124, 58, 237, 0.14);
+      transform: translateY(-1px);
     }
 
-    .in-developer-link span {
+    .in-developer-link-prefix {
       color: var(--in-purple);
+    }
+
+    .in-developer-link-arrow {
+      color: var(--in-purple);
+      font-size: 16px;
+      letter-spacing: 0;
     }
 
     .in-image-container {
@@ -476,8 +488,9 @@
             </div>
           </li>
         </ul>
-        <a class="in-developer-link" href="https://docs.intellinode.ai/" target="_blank" rel="noopener noreferrer">
-          <span>//</span> Developers: open-source framework docs
+        <a class="in-developer-link" href="https://docs.intellinode.ai/" target="_blank" rel="noopener noreferrer" aria-label="Open IntelliNode open-source framework documentation">
+          <span><span class="in-developer-link-prefix">//</span> Developers: open-source framework docs</span>
+          <span class="in-developer-link-arrow" aria-hidden="true">→</span>
         </a>
       </div>
 
