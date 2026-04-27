@@ -221,6 +221,29 @@
       line-height: 1.5;
     }
 
+    .in-developer-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      color: var(--in-muted);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .in-developer-link:hover,
+    .in-developer-link:focus-visible {
+      color: var(--in-white);
+    }
+
+    .in-developer-link span {
+      color: var(--in-purple);
+    }
+
     .in-image-container {
       position: relative;
       padding: 10px;
@@ -450,6 +473,9 @@
             </div>
           </li>
         </ul>
+        <a class="in-developer-link" href="https://docs.intellinode.ai/" target="_blank" rel="noopener noreferrer">
+          <span>//</span> Developers: open-source framework docs
+        </a>
       </div>
 
       <div class="in-image-container">
